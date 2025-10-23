@@ -18,10 +18,18 @@ public class Employee {
 int id;
 String name;
 String gender;
-String phone;
 int age;
+String phone;
+String email;
 String city;
 String country;
+String address;
+String postalcode;
+String department;
+String designation;
+double salary;
+String dateOfJoining;
+String employmentType;
 public int getId() {
 	return id;
 }
@@ -40,17 +48,23 @@ public String getGender() {
 public void setGender(String gender) {
 	this.gender = gender;
 }
+public int getAge() {
+	return age;
+}
+public void setAge(int age) {
+	this.age = age;
+}
 public String getPhone() {
 	return phone;
 }
 public void setPhone(String phone) {
 	this.phone = phone;
 }
-public int getAge() {
-	return age;
+public String getEmail() {
+	return email;
 }
-public void setAge(int age) {
-	this.age = age;
+public void setEmail(String email) {
+	this.email = email;
 }
 public String getCity() {
 	return city;
@@ -64,4 +78,48 @@ public String getCountry() {
 public void setCountry(String country) {
 	this.country = country;
 }
+public String getAddress() {
+	return address;
 }
+public void setAddress(String address) {
+	this.address = address;
+}
+public String getPostalcode() {
+	return postalcode;
+}
+public void setPostalcode(String postalcode) {
+	this.postalcode = postalcode;
+}
+public String getDepartment() {
+	return department;
+}
+public void setDepartment(String department) {
+	this.department = department;
+}
+public String getDesignation() {
+	return designation;
+}
+public void setDesignation(String designation) {
+	this.designation = designation;
+}
+public double getSalary() {
+	return salary;
+}
+public void setSalary(double salary) {
+	this.salary = salary;
+}
+public String getDateOfJoining() {
+	return dateOfJoining;
+}
+public void setDateOfJoining(String dateOfJoining) {
+	this.dateOfJoining = dateOfJoining;
+}
+public String getEmploymentType() {
+	return employmentType;
+}
+public void setEmploymentType(String employmentType) {
+	this.employmentType = employmentType;
+}
+}
+
+

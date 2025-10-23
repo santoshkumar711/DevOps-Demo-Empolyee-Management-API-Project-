@@ -22,7 +22,7 @@ public class EmployeeController {
 	@Autowired
 	EmployeeRepository erepo;
 	Logger logger = LoggerFactory.getLogger(EmployeeController.class);
-	@RequestMapping("/test")
+	@RequestMapping("/employee")
 	public String test()
 	{
 		logger.info("this is test info");
@@ -30,7 +30,7 @@ public class EmployeeController {
 		logger.error("logger test error");
 		logger.debug("logger test debug");
 		logger.trace("logger test trace");
-		return "This is the test only";
+		return "This is the test onlyz";
 	}
 	
 	@PostMapping("/save")
@@ -67,10 +67,18 @@ public class EmployeeController {
 		Employee emp=erepo.findById(id).get();
 		emp.setName(employee.getName());
 		emp.setGender(employee.getGender());
-		emp.setPhone(employee.getPhone());
 		emp.setAge(employee.getAge());
+		emp.setPhone(employee.getPhone());
+		emp.setEmail(employee.getEmail());
 		emp.setCity(employee.getCity());
 		emp.setCountry(employee.getCountry());
+		emp.setAddress(employee.getAddress());
+		emp.setPostalcode(employee.getPostalcode());
+		emp.setDepartment(employee.getDepartment());
+		emp.setDesignation(employee.getDesignation());
+		emp.setSalary(employee.getSalary());
+		emp.setDateOfJoining(employee.getDateOfJoining());
+		emp.setEmploymentType(employee.getEmploymentType());
 		erepo.save(emp);
 		return emp;
 	}
