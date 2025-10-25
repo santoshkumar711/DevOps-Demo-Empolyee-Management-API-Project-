@@ -30,7 +30,7 @@ public class EmployeeController {
 		logger.error("logger test error");
 		logger.debug("logger test debug");
 		logger.trace("logger test trace");
-		return "This is the test onlyz";
+		return "This is employee app";
 	}
 	
 	@PostMapping("/save")
