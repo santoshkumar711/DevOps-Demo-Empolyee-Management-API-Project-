@@ -16,8 +16,9 @@ services:
     restart: unless-stopped
 
   app:
-    image: santoshkumar711/employee-app:v1
     build: .
+    image: santoshkumar711/employee-app:v1
+    container_name: employee-app
     depends_on:
       - db
     ports:
@@ -27,24 +28,9 @@ services:
       SPRING_DATASOURCE_USERNAME: employee
       SPRING_DATASOURCE_PASSWORD: santoor711
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_SHOW_SQL: true
+      SPRING_JPA_SHOW_SQL: "true"
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MariaDBDialect
     restart: always
 
-  jenkins:
-    image: jenkins/jenkins:lts-jdk17
-    container_name: jenkins
-    user: root
-    ports:
-      - "8080:8080"
-      - "50000:50000"
-    volumes:
-      - jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      JAVA_OPTS: "-Xmx512m"
-    restart: unless-stopped
-
 volumes:
   employeedb_data:
-  jenkins_home:
